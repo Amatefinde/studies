@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <string> 
 #include <conio.h>
 #include <cctype> 
@@ -7,8 +7,8 @@ using namespace std;
 int numm1(int s) {
     cout << "Даны две переменные целого типа: A и B. Если их значения не равны, \nто программа присвоит каждой переменной большее из этих значений, а если равны, \nто присвоит переменным нулевые значения, а потом выведем новые значения A и B.\n";
     cout << "Введите А и B: ";
-    int b,a,maxim;
-    cin >> a>>b;
+    int b, a, maxim;
+    cin >> a >> b;
     if (a > b)
         maxim = a;
     else maxim = b;
@@ -30,7 +30,7 @@ int numm2(int s) {
 
     cout << "Даны три числа. Программа выведет сумму двух наибольших из них\n";
     cout << "Введите три числа через пробел: ";
-    int a, b, c,min;
+    int a, b, c, min;
     cin >> a >> b >> c;
     cout << endl;
     if (a < b && a < c)
@@ -46,10 +46,10 @@ int numm2(int s) {
 int numm3(int s) {
 
     cout << "На плоскости расположены три точки: A, B, C.\nПрограмма определит, какая из двух последних точек (B или C) расположена \nближе к A, и выведет эту точку и ее расстояние от точки A.\n";
-    int64_t ax,ay,bx,by,cx,cy;
+    int64_t ax, ay, bx, by, cx, cy;
     double blen, clen;
     cout << "\nВведите координаты точки А (X и Y через пробел): ";
-    cin >> ax>>ay;
+    cin >> ax >> ay;
     cout << "Введите координаты точки B (X и Y через пробел): ";
     cin >> bx >> by;
     cout << "Введите координаты точки C (X и Y через пробел): ";
@@ -58,16 +58,17 @@ int numm3(int s) {
     clen = pow(pow(abs(ax - cx), 2) + pow(abs(ay - cy), 2), 0.5);
     if (blen < clen)
     {
-        cout << "\nТочка B расположена ближе. Растояние от А до B: " << blen<<endl;
+        cout << "\nТочка B расположена ближе. Расcтояние от А до B: " << blen << endl;
         return 0;
     }
-    cout << "\nТочка C расположена ближе. Растояние от A до C: " << clen<<endl;
+    else if (blen == clen) cout << "\nТочки равноудалены. Расcтояние: " << clen << endl;
+    else cout << "\nТочка C расположена ближе. Расcтояние от A до C: " << clen << endl;
 
     return 0;
 }
 
 int numm4(int s) {
-    int x,y;
+    int x, y;
     cout << "Введите координаты точки не лежащей на осях OX и OY. Программа определит в какой четверти находиться точка.\n";
     cout << "X = ";
     cin >> x;
@@ -96,7 +97,7 @@ int numm5(int s) {
     else if (n > 0) cout << "Положительное ";
     else
     {
-        cout << "Нулевое число "<<endl;
+        cout << "Нулевое число " << endl;
         return 0;
     }
     if (n % 2 == 0) cout << "чётное ";
